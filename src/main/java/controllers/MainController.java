@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/write-script"})
 public class MainController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,6 +27,6 @@ public class MainController extends HttpServlet {
         req.setAttribute("columns", tableInfoHolderToCreateScriptsFor.getColumns());
         req.setAttribute("indexes", tableInfoHolderToCreateScriptsFor.getIndexes());
         req.setAttribute("vendors", tableInfoHolderToCreateScriptsFor.getVendorDBS());
-        req.getRequestDispatcher("/scriptsInfo").forward(req, resp);
+        req.getRequestDispatcher("/scriptsInfo.jsp").forward(req, resp);
     }
 }

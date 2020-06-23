@@ -5,14 +5,14 @@
 <jsp:useBean id="columns" scope="request" type="java.util.List"/>
 <jsp:useBean id="indexes" scope="request" type="java.util.List"/>
 <jsp:useBean id="vendors" scope="request" type="java.util.List"/>
-<jsp:useBean id="tableHolder" scope="request" type="pojos.TableInfoHolder"/>
+<%--<jsp:useBean id="tableHolder" scope="request" type="pojos.TableInfoHolder"/>--%>
 <html>
 <head>
     <title>Scripts information holder</title>
 
 </head>
 <body>
-<form autocomplete="off">
+<form autocomplete="off" action="/script">
     <fieldset id="main-information">
         <legend>Main information</legend>
         <div class="form-group">
@@ -60,7 +60,7 @@
                 </c:forEach>
             </div>
     </fieldset>
-    <fieldset id="Indexes-information"> //indexes
+    <fieldset id="Indexes-information">
         <legend>Indexes</legend>
         <table>
             <tr>
@@ -79,6 +79,7 @@
                 </td>
 
             </tr>
+            </c:forEach>
         </table>
     </fieldset>
     <button type="submit" value="Submit">Submit</button>
