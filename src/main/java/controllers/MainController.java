@@ -20,4 +20,14 @@ public class MainController extends HttpServlet {
         req.setAttribute("vendors", tableInfoHolderToCreateScriptsFor.getVendorDBS());
         req.getRequestDispatcher("/scriptsInfo").forward(req, resp);
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        TableInfoHolder tableInfoHolderToCreateScriptsFor = new TableInfoHolder();
+        req.setAttribute("tableHolder", tableInfoHolderToCreateScriptsFor);
+        req.setAttribute("columns", tableInfoHolderToCreateScriptsFor.getColumns());
+        req.setAttribute("indexes", tableInfoHolderToCreateScriptsFor.getIndexes());
+        req.setAttribute("vendors", tableInfoHolderToCreateScriptsFor.getVendorDBS());
+        req.getRequestDispatcher("/scriptsInfo").forward(req, resp);
+    }
 }

@@ -1,0 +1,36 @@
+### GIT ###
+.git/
+
+### IDE ###
+# eclipse
+.eclipse
+.project
+.metadata/
+*.launch
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+### Java ###
+target/
+log/
+bin/
+**/META-INF/**
+
+### Project misc ###
+.classpath
+.settings/
+.recommenders/
+test-output/
+settings.xml
+build.cmd
+deploy*.cmd
+
+### Node Files ###
+**/node/**
+**/node_modules/**
+**/dist/**
+**/.quasar/**
+**/package-lock.json
